@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Custom properties */
+:root{
+    /* Color Palette */
+    --primary: #151B25;
+    --secondary: #192E41;
+    --tertiary: #52688F;
+    --quaternary: #BBC8DE;
+
+    /* Fonts */
+    --primaryfont: 'Arial', Helvetica, sans-serif;
+    --secondaryfont: 'Poppins', sans-serif;
+}
+
+
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    background-color: var(--secondary);
+    font-family: var(--primaryfont);
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.bg-cornflower-black{
+    background-color: var(--tertiary);
+}
+
+.bg-cornflower{
+    background-color: var(--quaternary);
+}
+
+.bar{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+}
+
+/* Botones */
+.btn{
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn-edit{
+    color: var(--tertiary);
+}
+
+.btn-delete{
+    color: var(--secondary);
+}
+
+.back{
+    background-color: var(--tertiary);
+    border-radius: 5px;
+    text-align: center;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+.shadow{
+    -webkit-box-shadow: 1px 5px 10px 5px rgba(21,27,37,0.5);
+    -moz-box-shadow: 1px 5px 10px 5px rgba(21,27,37,0.5);
+    box-shadow: 1px 5px 10px 5px rgba(21,27,37,0.5);
+    border-radius: 10px;
+}
+
+h1, h2{
+    font-family: var(--secondaryfont);
+    text-align: center;
+    margin: 0;
+}
+h1{
+    padding: 20px;
+    color: white;
+}
+
+h2{
+    font-size: 2rem;
+    color: var(--secondary);
+}
+
+.bar-container{
+    background-color: var(--primary);
+}
+
+/* Form */
+form{
+    padding: 3rem;
+    margin-top: 2rem;
+}
+
+form legend {
+    font-family: var(--secondaryfont);
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+}
+
+legend span {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    clear: both;
+    display: block;
+}
+
+@media only screen and (min-width: 768px){
+    .fields{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .field{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+}
+
+.field{
+    padding: .5rem 0;
+}
+
+.field label{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.field input[type="text"],
+.field input[type="tel"]{
+    width: 100%;
+    border: none;
+    padding: .5rem;
+    height: 2.5rem;
+    margin-top: .5rem;
+    font-size: 1.2rem;
+}
+
+.send{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.field input[type="submit"]{
+    background-color: var(--secondary);
+    border: none;
+    color: white;
+    padding: 1rem 4rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    transition: background-color .3s ease-in-out;
+    flex: 1;
+}
+
+.field input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: var(--primary);
+}
+
+@media only screen and (min-width: 768px){
+    .field input[type="submit"]{
+        flex: 0 0 auto;
+        margin-right: .5rem;
+    }
+}
+
+/* Contacts */
+
+.contacts{
+    padding: 2rem;
+    margin-top: 3rem; 
+}
+
+.contacts-container{
+    max-width: 800px;
+    margin: 4rem auto 0 auto;
+}
+
+.total-contacts{
+    font-family: var(--secondaryfont);
+    margin: 2rem 0;
+    text-align: center;
+    color: var(--secondary);
+    font-size: 2rem;
+}
+.total-contacts span{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.seeker{
+    width: 100%;
+    height: 4rem;
+    padding: 1rem;
+    border: 1px solid #e1e1e1;
+    margin: 2rem 0;
+}
+
+.table-container{
+    overflow: scroll;
+}
+
+@media only screen and (min-width: 768px){
+    .table-container{
+        overflow: unset;
+    }
+}
+
+.list-contacts{
+    width: 100%;
+    margin-top: 1rem;
+    border-collapse: collapse;
+}
+
+.list-contacts thead{
+    background-color: var(--secondary);
+    color: white;
+    text-transform: uppercase;
+}
+.list-contacts thead th{
+    padding: 1rem 0;
+}
+
+.list-contacts tbody td{
+    padding: .5rem;
+    text-align: center;
+}
+
+.list-contacts button{
+    background-color: transparent!important;
+    border: none;
+}
+
+/* Notifications */
+.notification{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem 3rem;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+.visible{
+    opacity: 1;
+}
+
+/* Notifications colors */
+
+.right{
+    background-color: rgb(179,241,117);
+    color: green;
+}
+
+.error{
+    background-color: rgb(238,148,166);
+    color: rgb(163,0,33);
+}
